@@ -35,4 +35,23 @@
         <property name="basePackage" value="com.Coffee.dao"/>
     </bean>
 
+    <!--配置spring框架声明事务管理-->
+    <!--配置事物管理器-->
+
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true" />
+    <!--配置实务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="find*" read-only="true"/>
+            <tx:method name="*" isolation="DEFAULT"/>
+        </tx:attributes>
+    </tx:advice>
+    <!--配置事物增强-->
+    <aop:config>
+        <aop:advisor advice-ref="txAdvice" pointcut="execution(* com.Coffee.service.impl.*ServiceImpl.*(..))"/>
+    </aop:config>
+
 </beans>
