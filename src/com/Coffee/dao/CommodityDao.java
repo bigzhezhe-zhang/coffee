@@ -1,14 +1,14 @@
 package com.Coffee.dao;
 
-import com.Coffee.domain.User;
+import com.Coffee.domain.Commodity;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface UserDao {
+public interface CommodityDao {
 
-    @Select("select * from user")
-    public List<User> findAll();
+    @Select("select * from commodity")
+    public List<Commodity> findAll();
 }

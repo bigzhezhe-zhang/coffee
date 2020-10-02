@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-  <a href="user/list">lal</a>
+  <a href="commodity/clist">lal</a>
   </body>
 </html>

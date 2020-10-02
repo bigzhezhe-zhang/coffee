@@ -12,8 +12,8 @@
     <title>test</title>
 </head>
 <body>
-<c:forEach items="${list}" var="user">
-    ${user.username}<br>
+<c:forEach items="${list}" var="commodity">
+    ${commodity.id}${commodity.name}${commodity.number}${commodity.price}<br>
 </c:forEach>
 </body>
 </html>

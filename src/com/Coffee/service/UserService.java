@@ -1,5 +1,7 @@
 package com.Coffee.service;
 
+import com.Coffee.domain.User;
+
 import java.util.List;
 
 public interface UserService {
