@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<!-- 网页使用的语言 -->
+<html lang="zh-CN">
+<head>
+    <!-- 指定字符集 -->
+    <meta charset="UTF-8">
+    <title>商品下单</title>
+
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h3 style="text-align: center">商品详情</h3>
+    <table border="1" class="table table-bordered table-hover">
+        <tr class="success">
+            <th>分类</th>
+            <th>种类</th>
+            <th>加冰</th>
+            <th>温热</th>
+            <th>价钱</th>
+        </tr>
+        <tr>
+            <td>意大利特浓咖啡</td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="maqiduo" value="coffe"  />1.玛奇朵
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"   />
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="double" value="coffe"  />2.双倍浓缩
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="moka" value="coffe"  />3.摩卡
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"   />
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>美式咖啡</td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="qiaokeli" value="coffe"  />1.巧克力美式
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="jiaotang" value="coffe"  />2.焦糖美式
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" />
+            </form></td>
+            <td>58</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="bafaliya" value="coffe" />3.巴伐利亚
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>拿铁咖啡</td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="icecream" value="coffe" />1.冰淇淋拿铁
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"   />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="natie" value="coffe"  />2。焦糖拿铁
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="lemon" value="coffe" />3.柠檬拿铁
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>热巧克力</td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="yidali" value="coffe"  />1.意大利风格
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"/>
+            </form></td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="white" value="coffe"  />2.白色热巧克力
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" name="zhumulangma" value="coffe"  />3.珠穆朗玛
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox" />
+            </form></td>
+            <td><form action="form_action.asp" method="get">
+            <input type="checkbox"  />
+            </form></td>
+            <td>48</td>
+         <tr>
+            <td colspan="8" align="center"><a class="btn btn-primary" href="add.html">结算</a></td>
+        </tr>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

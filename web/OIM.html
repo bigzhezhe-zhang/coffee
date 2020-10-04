@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+          background-image:url("1.jpg")
+        }
+        table
+        {
+            border-collapse: collapse;
+            margin: 0 auto;
+            text-align: center;
+        }
+        table td, table th
+        {
+            border: 1px solid #cad9ea;
+            color: #666;
+            height: 30px;
+        }
+        table thead th
+        {
+            background-color: #CCE8EB;
+            width: 100px;
+        }
+        table tr:nth-child(odd)
+        {
+            background: #fff;
+        }
+        table tr:nth-child(even)
+        {
+            background: #F5FAFA;
+        }
+    </style>
+</head>
+<body>
+    <table width="90%" class="table">
+        <caption>
+            <h2>订单信息维护界面</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>商品</th>
+                <th>状态</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>商品</td>
+            <td><input name="checkbox" type="checkbox" value="checkbox"  />出单<input name="checkbox" type="checkbox" value="checkbox"  />预订</td>
+        </tr>
+    </table>
+</body>
+</html>
