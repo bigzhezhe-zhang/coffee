@@ -15,10 +15,5 @@ public class CommodityController {
 
     @Autowired
     private CommodityService commodityService;
-    @RequestMapping("/clist")
-    public String clist(Model model){
-        List<Commodity> list = commodityService.findAll();
-        model.addAttribute("list",list);
-        return "list";
-    }
+
 }
