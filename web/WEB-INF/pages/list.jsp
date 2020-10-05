@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>test</title>
+    <title>Test</title>
 </head>
 <body>
 <c:forEach items="${list}" var="commodity">
