@@ -28,6 +28,25 @@
     </style>
 </head>
 <body>
+<!-- 首页导航 -->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">欢迎${username}登录</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        设置<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/login/toUpdate">修改联系方式</a></li>
+                        <li><a href="">查看历史订单</a></li>
+                        <li><a href="">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
 <div class="container">
     <h3 style="text-align: center">商品详情</h3>
     <table border="1" class="table table-bordered table-hover" style="margin: auto">
