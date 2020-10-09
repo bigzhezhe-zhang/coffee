@@ -6,7 +6,7 @@ public class User implements Serializable {
     private Integer id;
     private String username;
     private String password;
-    private Integer telephone;
+    private String telephone;
     private String identity;
 
     public Integer getId() {
@@ -33,11 +33,11 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public Integer getTelephone() {
+    public String getTelephone() {
         return telephone;
     }
 
-    public void setTelephone(Integer telephone) {
+    public void setTelephone(String telephone) {
         this.telephone = telephone;
     }
 

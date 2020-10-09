@@ -16,4 +16,28 @@ public class CommodityImpl implements CommodityService {
     public List<Commodity> findAll() {
         return commodityDao.findAll();
     }
+
+
+    @Override
+    public List<Commodity> commodity(String name) {
+        Commodity commodity = new Commodity();
+        commodity.setName(name);
+        return commodityDao.commodity(name);
+    }
+
+    @Override
+    public int commodity1(Commodity commodity) {
+        return commodityDao.commodity1(commodity);
+    }
+
+    @Override
+    public int commodity2(Commodity commodity) {
+        return commodityDao.commodity2(commodity);
+    }
+
+    @Override
+    public int commodity3(Integer id) {
+        return commodityDao.commodity3(id);
+    }
+
 }

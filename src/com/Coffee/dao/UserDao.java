@@ -1,10 +1,7 @@
 package com.Coffee.dao;
 
 import com.Coffee.domain.User;
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -41,4 +38,13 @@ public interface UserDao {
      */
     @Update("update user set telephone=#{telephone} where username=#{username}")
     public void updateByUsername(@Param("telephone") int telephone, @Param("username") String username);
+
+    @Select("select * from user")
+    public List<User> user (String username);
+
+    @Update("update user set password=#{password},telephone=#{telephone} where id=#{id}")
+    public int user1(@Param("password")String password, @Param("telephone")String telephone, @Param("id")Integer id);
+
+    @Delete("delete from user where id=#{id}")
+    public int user2(@Param("id") Integer id);
 }

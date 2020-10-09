@@ -28,4 +28,28 @@ public class UserController {
         mv.addObject("user",user);
         return mv;
     }
+    @RequestMapping("/userInformation")
+    public ModelAndView userInformation (String username){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("userInformation");
+        List<User> list = userService.user(username);
+        mv.addObject("list",list);
+        return mv;
+    }
+
+    @RequestMapping("/modify")
+    public ModelAndView modify (String password,String telephone,Integer id){
+        ModelAndView mv = new ModelAndView();
+        userService.user1(password, telephone, id);
+        mv.setViewName("userInformation");
+        return mv;
+    }
+
+    @RequestMapping("/delete1")
+    public ModelAndView delete1(Integer id){
+        userService.user2(id);
+        ModelAndView mv =new ModelAndView();
+        mv.setViewName("userInformation");
+        return mv;
+    }
 }

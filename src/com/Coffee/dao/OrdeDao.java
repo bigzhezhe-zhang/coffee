@@ -26,4 +26,10 @@ public interface OrdeDao {
 
 //    @Select("select * from orde where username=#{username}")
 //    public List<Orde> findHorder(String username);
+
+    @Select("select * from orde")
+    public List<Orde> orde(String username);
+
+    @Update("update orde set state=#{state} where id=#{id}")
+    public void orde1 (@Param("state")String state,@Param("id") Integer id);
 }

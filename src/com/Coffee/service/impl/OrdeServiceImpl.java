@@ -31,4 +31,15 @@ public class OrdeServiceImpl implements OrdeService {
         System.out.println("service:"+username);
         return ordeDao.findAll(username);
     }
+    @Override
+    public List<Orde> orde(String username) {
+        Orde orde = new Orde();
+        orde.setUsername(username);
+        return ordeDao.orde(username);
+    }
+
+    @Override
+    public void orde1(String state, Integer id) {
+        ordeDao.orde1(state,id);
+    }
 }
