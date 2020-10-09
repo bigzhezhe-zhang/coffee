@@ -16,4 +16,11 @@ public interface OrdeService {
      * @param orde
      */
     public void add(Orde orde);
+
+    /**
+     * 查询历史订单
+     * @param username
+     * @return
+     */
+    public List<Orde> horders(String username);
 }

@@ -1,5 +1,7 @@
 package com.Coffee.domain;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -10,6 +12,15 @@ public class Orde implements Serializable {
     private Integer number;
     private Double price;
     private Date date;
+    private Commodity commodity;
+
+    public Commodity getCommodity() {
+        return commodity;
+    }
+
+    public void setCommodity(Commodity commodity) {
+        this.commodity = commodity;
+    }
 
     public Integer getId() {
         return id;
@@ -68,6 +79,7 @@ public class Orde implements Serializable {
                 ", number=" + number +
                 ", price=" + price +
                 ", date=" + date +
+                ", commodity=" + commodity +
                 '}';
     }
 }

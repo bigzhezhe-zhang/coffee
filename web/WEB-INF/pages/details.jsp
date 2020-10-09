@@ -26,6 +26,13 @@
             text-align: center;
         }
     </style>
+    <script>
+        function book(username,nameid,price) {
+            if (confirm("您是否确认预订")){
+                location.href="/order/book?username="+username+"&nameid="+nameid+"&price="+price;
+            }
+        }
+    </script>
 </head>
 <body>
 <!-- 首页导航 -->
@@ -39,7 +46,7 @@
                         设置<span class="caret"></span></a>
                     <ul class="dropdown-menu">
                         <li><a href="/login/toUpdate">修改联系方式</a></li>
-                        <li><a href="">查看历史订单</a></li>
+                        <li><a href="/order/horders">查看历史订单</a></li>
                         <li><a href="">退出</a></li>
                     </ul>
                 </li>
@@ -59,12 +66,11 @@
         <c:forEach items="${list}" var="coffee">
             <tr>
                 <td>${coffee.name}</td>
-                <td><img src="${pageContext.request.contextPath}/imgs/coffee.jpg" title="hahah"></td>
+                <td><img src="${pageContext.request.contextPath}/imgs/coffee.jpg" title="coffee"></td>
                 <td>${coffee.price}/杯</td>
-                <td><a class="btn btn-primary" href="add.html">预订</a></td>
+                <td><a class="btn btn-primary" href="javascript:book('${username}','${coffee.id}','${coffee.price}');">预订</a></td>
             </tr>
         </c:forEach>
-
     </table>
 </div>
 </body>
