@@ -30,4 +30,10 @@ public interface UserService {
      * @param username
      */
     public void updateByUsername(int telephone,String username);
+
+    public List<User> user(String username);
+
+    public int user1(String password,String telephone,Integer id);
+
+    public int user2(Integer id);
 }

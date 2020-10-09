@@ -23,4 +23,8 @@ public interface OrdeService {
      * @return
      */
     public List<Orde> horders(String username);
+
+    public List<Orde> orde (String username);
+
+    public void orde1(String state,Integer id);
 }

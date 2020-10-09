@@ -10,4 +10,12 @@ public interface CommodityService {
      * @return
      */
     public List<Commodity> findAll();
+
+    public List<Commodity> commodity(String name);
+
+    public int commodity1 (Commodity commodity);
+
+    public int commodity2(Commodity commodity);
+
+    public int commodity3(Integer id);
 }

@@ -11,6 +11,7 @@ public class Orde implements Serializable {
     private Integer nameid;
     private Integer number;
     private Double price;
+    private String state;
     private Date date;
     private Commodity commodity;
 
@@ -70,6 +71,15 @@ public class Orde implements Serializable {
         this.date = date;
     }
 
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
+    }
+
+
     @Override
     public String toString() {
         return "Orde{" +
@@ -78,6 +88,7 @@ public class Orde implements Serializable {
                 ", nameid=" + nameid +
                 ", number=" + number +
                 ", price=" + price +
+                ", state='" + state + '\'' +
                 ", date=" + date +
                 ", commodity=" + commodity +
                 '}';

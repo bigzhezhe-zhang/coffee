@@ -41,4 +41,20 @@ public class OrdeController {
         return mv;
     }
 
+    @RequestMapping("/orderInformation")
+    public ModelAndView orderInformation (String username){
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("orderInformation");
+        List<Orde> list = ordeService.orde("%" + username +"%");
+        mv.addObject("list",list);
+        return mv;
+    }
+
+    @RequestMapping("/modify")
+    public ModelAndView modify(String state,Integer id){
+        ModelAndView mv = new ModelAndView();
+        ordeService.orde1(state, id);
+        mv.setViewName("orderInformation");
+        return mv;
+    }
 }
