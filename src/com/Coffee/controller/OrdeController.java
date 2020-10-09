@@ -1,12 +1,44 @@
 package com.Coffee.controller;
 
+import com.Coffee.domain.Orde;
+import com.Coffee.service.OrdeService;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.HttpSession;
+import java.util.Date;
+import java.util.List;
+
+@Controller
+@RequestMapping("/order")
 public class OrdeController {
 
-    public ModelAndView Horder(){
+    @Autowired
+    private OrdeService ordeService;
+    @RequestMapping("/book")
+    public ModelAndView book(Orde orde){
         ModelAndView mv = new ModelAndView();
+        Date now=new Date();
+        orde.setDate(now);
+        ordeService.add(orde);
+        List<Orde> orders = ordeService.horders(orde.getUsername());
+        mv.addObject("orders",orders);
+        mv.setViewName("horders");
         return mv;
-
     }
+
+    @RequestMapping("/horders")
+    public ModelAndView horders(HttpSession session){
+        ModelAndView mv = new ModelAndView();
+        String username = (String) session.getAttribute("username");
+        System.out.println(username);
+        List<Orde> orders = ordeService.horders(username);
+        mv.addObject("orders",orders);
+        mv.setViewName("horders");
+        return mv;
+    }
+
 }

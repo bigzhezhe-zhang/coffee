@@ -11,4 +11,7 @@ public interface CommodityDao {
 
     @Select("select * from commodity")
     public List<Commodity> findAll();
+
+    @Select("select * from commodity where id=#{nameid}")
+    public Commodity findById(Integer nameid);
 }
