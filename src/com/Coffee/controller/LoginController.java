@@ -28,18 +28,21 @@ public class LoginController {
     @RequestMapping("/login")
     public ModelAndView login(String username,String password,HttpSession session){
         ModelAndView mv = new ModelAndView();
-        Boolean flog = loginService.login(username, password);
-        if (flog){
-            mv.setViewName("details");
-            List<Commodity> list = commodityService.findAll();
-            mv.addObject("list",list);
-            mv.addObject("username",username);
-            session.setAttribute("username",username);
-            return mv;
+        int flog = loginService.login(username, password);
+        if (flog != 2){
+            if (flog==0){
+                List<Commodity> list = commodityService.findAll();
+                mv.addObject("list",list);
+                mv.addObject("username",username);
+                session.setAttribute("username",username);
+                mv.setViewName("details");
+            }else {
+                mv.setViewName("business");
+            }
         }else {
             mv.setViewName("login");
-            return mv;
         }
+        return mv;
     }
 
     @RequestMapping("/toRegister")
