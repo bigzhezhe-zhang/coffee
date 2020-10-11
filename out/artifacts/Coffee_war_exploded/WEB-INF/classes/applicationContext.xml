@@ -20,7 +20,7 @@
     <!--spring整合mybatis-->
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
         <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql:///coffee"/>
+        <property name="url" value="jdbc:mysql:///coffee?serverTimezone=Asia/Shanghai"/>
         <property name="username" value="root"/>
         <property name="password" value="121231zz"/>
     </bean>

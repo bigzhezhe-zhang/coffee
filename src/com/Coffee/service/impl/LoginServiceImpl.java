@@ -18,10 +18,15 @@ public class LoginServiceImpl implements LoginService {
 
         if (username!=null&&password!=null){
             User user = userDao.findUserByUsername(username);
-            if ((user!=null)&&(user.getPassword().equals(password))&(user.getIdentity().equals('1'))){
-                return 1;
-            }else if ((user!=null)&&(user.getPassword().equals(password))&(user.getIdentity().equals('0'))){
-                return 0;
+            if ((user!=null)&&(user.getPassword().equals(password))){
+                System.out.printf(String.valueOf(user.getIdentity().equals("0")));
+                if (user.getIdentity().equals("1")){
+                    return 1;
+                }else if (user.getIdentity().equals("0")){
+                    return 0;
+                }else {
+                    return 2;
+                }
             }else {
                 return 2;
             }
