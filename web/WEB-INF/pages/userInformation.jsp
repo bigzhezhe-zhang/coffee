@@ -17,6 +17,11 @@
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+    </style>
 
     <script>
         function update(id) {
@@ -34,12 +39,13 @@
     <form action="${pageContext.request.contextPath}/user/userInformation" method="post">
         <input type="submit" value="刷新">
     </form>
-    <table>
-        <tr>
+    <table border="1" class="table table-bordered table-hover" style="margin: auto">
+        <tr class="success">
             <th align="center" >ID</th>
             <th align="center" >用户名称</th>
             <th align="center" >密码</th>
             <th align="center" >联系方式</th>
+            <th align="center">操作</th>
         </tr>
         <c:forEach items="${list}" var="userInformation">
             <tr>
@@ -53,11 +59,6 @@
                 </td>
                 <td>
                     <a href="javascript:update(${userInformation.id})" class="btn btn btn-primary">修改</a>
-                </td>
-                <td>
-<%--                    <form action="delete.do?id=${userInformation.id}" method="post">
-                        <input type="submit" value="删除">
-                    </form>--%>
                     <a href="javascript:delete1(${userInformation.id})" class="btn btn btn-primary">删除</a>
                 </td>
             </tr>
