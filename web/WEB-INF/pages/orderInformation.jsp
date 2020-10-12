@@ -51,6 +51,7 @@
     </div><!-- /.container-fluid -->
 </nav>
 <canvas id="canvas"></canvas>
+<div>
     <h1>订单信息维护</h1>
     <form action="${pageContext.request.contextPath}/order/orderInformation" method="post">
         <input type="submit" value="刷新">
@@ -64,6 +65,7 @@
             <th align="center" >商品价格</th>
             <th align="center" >商品状态</th>
             <th align="center" >日期</th>
+            <th align="center" >操作</th>
         </tr>
         <c:forEach items="${list}" var="orderInformation">
             <tr>
@@ -93,5 +95,6 @@
         </c:forEach>
     </table>
     ${msg}
+</div>
 </body>
 </html>

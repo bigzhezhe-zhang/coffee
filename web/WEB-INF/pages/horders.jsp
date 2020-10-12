@@ -45,7 +45,7 @@
 <body>
 <canvas id="canvas"></canvas>
 <div class="container">
-    <h3 style="text-align: center">用户信息列表</h3>
+    <h3 style="text-align: center">历史订单</h3>
     <table border="1" class="table table-bordered table-hover" style="margin: auto">
         <tr class="success">
             <th>名称</th>
