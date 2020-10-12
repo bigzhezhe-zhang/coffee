@@ -21,6 +21,7 @@
   <!-- 3. 导入bootstrap的js文件 -->
   <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
   <script type="text/javascript">
+
   </script>
 </head>
 <body>
@@ -37,11 +38,6 @@
       <input type="password" name="password" class="form-control" id="password" placeholder="请输入密码"/>
     </div>
 
-    <div>
-      <a href="commodity/commodityPrice">aaaa</a>
-      <a href="order/orderInformation">bbbb</a>
-      <a href="user/userInformation">cccc</a>
-    </div>
 
 <%--    <div class="form-inline">--%>
 <%--      <label for="vcode">验证码：</label>--%>

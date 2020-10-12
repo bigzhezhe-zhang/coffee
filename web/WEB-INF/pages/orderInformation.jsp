@@ -21,8 +21,37 @@
             text-align: center;
         }
     </style>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        设置<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/commodity/commodityPrice">商品价格信息维护</a></li>
+                        <li><a href="/order/orderInformation">订单信息维护</a></li>
+                        <li><a href="/user/userInformation">用户信息维护</a></li>
+                        <li><a href="">退出</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<canvas id="canvas"></canvas>
+<div>
     <h1>订单信息维护</h1>
     <form action="${pageContext.request.contextPath}/order/orderInformation" method="post">
         <input type="submit" value="刷新">
@@ -36,6 +65,7 @@
             <th align="center" >商品价格</th>
             <th align="center" >商品状态</th>
             <th align="center" >日期</th>
+            <th align="center" >操作</th>
         </tr>
         <c:forEach items="${list}" var="orderInformation">
             <tr>
@@ -65,5 +95,6 @@
         </c:forEach>
     </table>
     ${msg}
+</div>
 </body>
 </html>

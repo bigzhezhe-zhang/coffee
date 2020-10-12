@@ -10,8 +10,18 @@
 <html>
 <head>
     <title>Test</title>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
 <c:forEach items="${list}" var="commodity">
     ${commodity.id}${commodity.name}${commodity.number}${commodity.price}<br>
 </c:forEach>

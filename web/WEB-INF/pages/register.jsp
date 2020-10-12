@@ -28,6 +28,23 @@
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            text-align:center;
+            margin:o auto;
+            background-image:url(/imgs/back.png);
+            background-size:1400px 850px
+        }
+        div.container{
+            margin-top:100px;
+            margin-left:450px;
+            width:400px;
+            height:350px;
+            background:rgba(255,255,255,0.4);
+            border:1px soild #fff;
+            border-radius:20px;
+        }
+    </style>
 </head>
 <body>
 <div class="container">

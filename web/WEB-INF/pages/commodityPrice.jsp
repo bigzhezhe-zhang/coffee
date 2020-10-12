@@ -9,7 +9,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>商品库存价格信息维护</title>
     <!-- 1. 导入CSS的全局样式 -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
@@ -21,8 +21,18 @@
             text-align: center;
         }
     </style>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
     <h1>商品库存价格信息维护</h1>
     <form action="${pageContext.request.contextPath}/commodity/addCommodityInformation" method="post">
         <input type="submit" value="添加信息">
@@ -36,6 +46,7 @@
             <th align="center" >商品名称</th>
             <th align="center" >商品数量</th>
             <th align="center" >商品价格</th>
+            <th align="center" >操作</th>
         </tr>
         <c:forEach items="${list}" var="commodityPrice">
             <tr>
@@ -47,8 +58,6 @@
                     <form action="${pageContext.request.contextPath}/commodity/modify1" method="post">
                         <input type="submit" value="修改">
                     </form>
-                </td>
-                <td>
                     <form action="delete.do?id=${commodityPrice.id}" method="post">
                         <input type="submit" value="删除">
                     </form>

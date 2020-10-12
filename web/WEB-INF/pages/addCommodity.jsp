@@ -20,8 +20,18 @@
             text-align: center;
         }
     </style>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
     <div>
         <form action="${pageContext.request.contextPath}/commodity/addCommodity" method="post">
             <div>

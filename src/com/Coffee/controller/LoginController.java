@@ -42,7 +42,7 @@ public class LoginController {
                 session.setAttribute("username",username);
                 mv.setViewName("details");
             }else {
-                mv.setViewName("business");
+                mv.setViewName("orderInformation");
                 List<Orde> list = ordeService.orde("%" + username +"%");
                 mv.addObject("list",list);
             }
