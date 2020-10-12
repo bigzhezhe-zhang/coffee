@@ -10,6 +10,17 @@
 <html>
 <head>
     <title>Title</title>
+    <!-- 1. 导入CSS的全局样式 -->
+    <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <!-- 2. jQuery导入，建议使用1.9以上的版本 -->
+    <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
+    <!-- 3. 导入bootstrap的js文件 -->
+    <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        td, th {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <h1>商品库存价格信息维护</h1>
@@ -19,8 +30,8 @@
     <form action="${pageContext.request.contextPath}/commodity/commodityPrice" method="post">
         <input type="submit" value="刷新">
     </form>
-    <table>
-        <tr>
+    <table border="1" class="table table-bordered table-hover" style="margin: auto">
+        <tr class="success">
             <th align="center" >ID</th>
             <th align="center" >商品名称</th>
             <th align="center" >商品数量</th>

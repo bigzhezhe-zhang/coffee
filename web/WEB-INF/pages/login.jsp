@@ -20,6 +20,10 @@
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="${pageContext.request.contextPath}/css/girl.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.0.min.js"></script>
+    <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.min.js"></script>
     <script type="text/javascript">
     </script>
 </head>
@@ -56,5 +60,16 @@
     <%--    <strong>登录失败!</strong>--%>
     <%--  </div>--%>
 </div>
+<script>
+    L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 200,
+            "height": 400,
+            "position": "right",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
 </body>
 </html>
