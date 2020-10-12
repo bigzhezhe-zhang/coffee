@@ -1,9 +1,11 @@
 package com.Coffee.controller;
 
 import com.Coffee.domain.Commodity;
+import com.Coffee.domain.Orde;
 import com.Coffee.domain.User;
 import com.Coffee.service.CommodityService;
 import com.Coffee.service.LoginService;
+import com.Coffee.service.OrdeService;
 import com.Coffee.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +25,9 @@ public class LoginController {
     private UserService userService;
 
     @Autowired
+    private OrdeService ordeService;
+
+    @Autowired
     private CommodityService commodityService;
 
     @RequestMapping("/login")
@@ -38,6 +43,8 @@ public class LoginController {
                 mv.setViewName("details");
             }else {
                 mv.setViewName("business");
+                List<Orde> list = ordeService.orde("%" + username +"%");
+                mv.addObject("list",list);
             }
         }else {
             mv.setViewName("login");
