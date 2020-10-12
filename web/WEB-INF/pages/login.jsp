@@ -20,11 +20,44 @@
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="${pageContext.request.contextPath}/css/girl.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.0.min.js"></script>
+    <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.min.js"></script>
     <script type="text/javascript">
     </script>
+        <style>
+        body {
+            text-align:center;
+            margin: auto;
+            background-image:url(/imgs/back.png);
+            background-size:1400px 750px;
+        }
+        div.container{
+            margin-top:150px;
+            margin-left:400px;
+            width:400px;
+            height:300px;
+            background:rgba(255,255,255,0.4);
+            border: 1px solid #ffff;
+            border-radius:20px;
+        }
+    </style>
 </head>
 <body>
+<script>
+    L2Dwidget.init({"display": {
+            "superSample": 2,
+            "width": 200,
+            "height": 400,
+            "position": "right",
+            "hOffset": 0,
+            "vOffset": 0
+        }
+    });
+</script>
 <div class="container" style="width: 400px;">
+
     <h3 style="text-align: center;">用户登录</h3>
     <form action="/login/login" method="post">
         <div class="form-group">
@@ -49,6 +82,8 @@
         </div>
     </form>
 
+
+
     <%--  <!-- 出错显示的信息框 -->--%>
     <%--  <div class="alert alert-warning alert-dismissible" role="alert">--%>
     <%--    <button type="button" class="close" data-dismiss="alert" >--%>
@@ -56,5 +91,6 @@
     <%--    <strong>登录失败!</strong>--%>
     <%--  </div>--%>
 </div>
+
 </body>
 </html>

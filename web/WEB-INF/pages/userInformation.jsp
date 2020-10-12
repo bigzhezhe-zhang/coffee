@@ -28,8 +28,18 @@
             location.href="/user/delete1?id="+id;
         }
     </script>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
     <h1>用户信息维护</h1>
     <form action="${pageContext.request.contextPath}/user/userInformation" method="post">
         <input type="submit" value="刷新">

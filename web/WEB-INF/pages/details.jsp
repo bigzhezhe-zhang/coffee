@@ -21,9 +21,16 @@
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <!-- 3. 导入bootstrap的js文件 -->
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
     <style type="text/css">
         td, th {
             text-align: center;
+        }
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
         }
     </style>
     <script>
@@ -35,6 +42,7 @@
     </script>
 </head>
 <body>
+<canvas id="canvas"></canvas>
 <!-- 首页导航 -->
 <nav class="navbar navbar-default">
     <div class="container-fluid">

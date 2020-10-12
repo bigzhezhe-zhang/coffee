@@ -30,7 +30,7 @@ public class LoginController {
         ModelAndView mv = new ModelAndView();
         int flog = loginService.login(username, password);
         if (flog != 2){
-            if (flog==1){
+            if (flog==0){
                 List<Commodity> list = commodityService.findAll();
                 mv.addObject("list",list);
                 mv.addObject("username",username);

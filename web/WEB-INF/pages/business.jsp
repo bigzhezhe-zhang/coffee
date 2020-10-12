@@ -13,8 +13,18 @@
     <link href="${pageContext.request.contextPath}/css/girl.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.0.min.js"></script>
     <script type="text/javascript"  src="${pageContext.request.contextPath}/js/L2Dwidget.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
 <script>
     L2Dwidget.init({"display": {
             "superSample": 2,

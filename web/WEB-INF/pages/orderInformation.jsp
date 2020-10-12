@@ -10,8 +10,18 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
     <h1>订单信息维护</h1>
     <form action="${pageContext.request.contextPath}/order/orderInformation" method="post">
         <input type="submit" value="刷新">

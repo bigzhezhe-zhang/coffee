@@ -19,9 +19,19 @@
     <link href="${pageContext.request.contextPath}/css/bootstrap.min.css" rel="stylesheet">
     <script src="${pageContext.request.contextPath}/js/jquery-2.1.0.min.js"></script>
     <script src="${pageContext.request.contextPath}/js/bootstrap.min.js"></script>
+    <script src="${pageContext.request.contextPath}/js/change2.js" type=""text="text/javascript"></script>
+    <style>
+        #canvas{
+            position:fixed;
+            background:#fff;
+            overflow: auto;
+            z-index: -1;
+        }
 
+    </style>
 </head>
 <body>
+<canvas id="canvas"></canvas>
 <div class="container" style="width: 400px;">
     <h3 style="text-align: center;">修改信息</h3>
     <form action="/user/update" method="post">
