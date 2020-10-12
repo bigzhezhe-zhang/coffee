@@ -46,6 +46,7 @@
             <th align="center" >商品名称</th>
             <th align="center" >商品数量</th>
             <th align="center" >商品价格</th>
+            <th align="center" >操作</th>
         </tr>
         <c:forEach items="${list}" var="commodityPrice">
             <tr>
@@ -57,8 +58,6 @@
                     <form action="${pageContext.request.contextPath}/commodity/modify1" method="post">
                         <input type="submit" value="修改">
                     </form>
-                </td>
-                <td>
                     <form action="delete.do?id=${commodityPrice.id}" method="post">
                         <input type="submit" value="删除">
                     </form>
